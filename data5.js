@@ -139,7 +139,7 @@ if (loginForm) {
     if (window.location.pathname.includes('belajar5.html')) {
         if (localStorage.getItem('isLoggedIn') !== 'true') {
             alert("Akses ditolak! Silakan login terlebih dahulu.");
-            window.location.href = 'belajar4.html';
+            window.location.href = 'index.html';
         }
     }
 
@@ -151,3 +151,4 @@ function logout() {
     }
 
 }
+
