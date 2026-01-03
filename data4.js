@@ -26,8 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('semuaUserRAG', JSON.stringify(daftarUser));
 
             alert('Pendaftaran Berhasil! Akun kamu sudah tersimpan di database.');
-            window.location.href = 'index.html';
+            window.location.href = '../HTML/index.html';
         });
     }
 
 });
+
