@@ -147,6 +147,7 @@ if (loginForm) {
 function logout() {
     if (confirm("Apakah kamu yakin ingin keluar?")) {
         localStorage.removeItem('isLoggedIn');
-        window.location.href = 'belajar4.html';
+        window.location.href = 'index.html';
     }
+
 }
