@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         padding: 2px 6px;
         border-radius: 50%;
         font-weight: bold;
-        display: none; /* Sembunyikan dulu kalau masih 0 */
+        display: none; 
     `;
     
 
@@ -78,7 +78,7 @@ if (googleBtn) {
 const fbBtn = document.querySelector('.social-btn.facebook');
 if (fbBtn) {
     fbBtn.addEventListener('click', function() {
-        // Minta input ID atau Email Facebook
+        
         const emailFB = prompt("Masukkan Email atau ID Facebook Anda:");
         
         if (emailFB) {
@@ -139,7 +139,7 @@ if (loginForm) {
     if (window.location.pathname.includes('belajar5.html')) {
         if (localStorage.getItem('isLoggedIn') !== 'true') {
             alert("Akses ditolak! Silakan login terlebih dahulu.");
-            window.location.href = 'belajar4.html';
+            window.location.href = 'index.html';
         }
     }
 
@@ -147,6 +147,7 @@ if (loginForm) {
 function logout() {
     if (confirm("Apakah kamu yakin ingin keluar?")) {
         localStorage.removeItem('isLoggedIn');
-        window.location.href = 'belajar4.html';
+        window.location.href = 'index.html';
     }
+
 }
