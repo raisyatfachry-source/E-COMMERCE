@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function goToHome() {
         localStorage.setItem('isLoggedIn', 'true');
-        window.location.href = 'belajar5.html'; 
+        window.location.href = '../HTML/belajar5.html'; 
     }
 
 
@@ -106,7 +106,7 @@ function prosesLoginSosial(email, provider) {
 
     alert(`Berhasil masuk via ${provider}!`);
     localStorage.setItem('isLoggedIn', 'true');
-    window.location.href = 'belajar5.html';
+    window.location.href = '../HTML/belajar5.html';
 }
 
  
@@ -128,7 +128,7 @@ if (loginForm) {
         if (userDitemukan) {
             alert('Selamat datang, ' + userDitemukan.name + '!');
             localStorage.setItem('isLoggedIn', 'true');
-            window.location.href = 'belajar5.html'; 
+            window.location.href = '../HTML/belajar5.html'; 
         } else {
             alert('Email atau password salah!');
         }
@@ -139,7 +139,7 @@ if (loginForm) {
     if (window.location.pathname.includes('belajar5.html')) {
         if (localStorage.getItem('isLoggedIn') !== 'true') {
             alert("Akses ditolak! Silakan login terlebih dahulu.");
-            window.location.href = 'index.html';
+            window.location.href = '../HTML/index.html';
         }
     }
 
@@ -147,8 +147,9 @@ if (loginForm) {
 function logout() {
     if (confirm("Apakah kamu yakin ingin keluar?")) {
         localStorage.removeItem('isLoggedIn');
-        window.location.href = 'index.html';
+        window.location.href = '../HTML/index.html';
     }
 
 }
+
 
