@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pembayaran - RAG</title>
+    <link rel="stylesheet" href="../CSS/style5.css">
+    <link rel="stylesheet" href="../CSS/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-card">
+            <h2>Detail Pembayaran</h2>
+            <p>Item: <span id="display-item"></span></p>
+            <div class="total-price" id="display-total"></div>
+            
+            <div class="method-box" data-method="Bank BCA">
+                <i class="fa-solid fa-building-columns"></i> Transfer BCA
+            </div>
+            <div class="method-box" data-method="Gopay">
+                <i class="fa-solid fa-wallet"></i> Gopay / OVO
+            </div>
+
+            <button class="btn-pay" id="btnBayar">Konfirmasi Bayar</button>
+        </div>
+    </div>
+    <script src="../JS/payment.js"></script>
+</body>
+</html>

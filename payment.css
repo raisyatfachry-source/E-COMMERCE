@@ -1,0 +1,16 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.payment-container { padding: 50px 8%; max-width: 600px; margin: auto; }
+.payment-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.method-box { border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-top: 10px; cursor: pointer; transition: 0.3s; }
+.method-box.selected { border-color: #ff4757; background: #fff5f6; }
+.total-price { font-size: 24px; font-weight: bold; color: #ff4757; margin: 20px 0; }
+.btn-pay { width: 100%; background: #2ed573; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; }
+
