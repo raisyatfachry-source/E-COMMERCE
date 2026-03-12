@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice - RAG Store</title>
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        .invoice-box {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 1px solid #333;
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .invoice-header { border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
+        .invoice-details { margin-bottom: 20px; line-height: 2; }
+        .invoice-total { font-size: 20px; font-weight: bold; color: #2ed573; border-top: 1px solid #444; padding-top: 10px; }
+        .btn-print { background: #2ed573; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 20px; width: 100%; }
+    </style>
+</head>
+<body style="background: #000;">
+    <div class="invoice-box" id="invoiceContent">
+        <div class="invoice-header">
+            <h2>RAG<span>.</span> Invoice</h2>
+            <p id="invDate"></p>
+        </div>
+        <div class="invoice-details">
+            <p><strong>Nama Pembeli:</strong> <span id="invName"></span></p>
+            <p><strong>ID Pesanan:</strong> #<span id="invID"></span></p>
+            <p><strong>Item:</strong> <span id="invItem"></span></p>
+            <p><strong>Metode:</strong> <span id="invMethod"></span></p>
+        </div>
+        <div class="invoice-total">
+            Total Bayar: <span id="invTotal"></span>
+        </div>
+        <button class="btn-print" onclick="window.print()">Cetak / Simpan PDF</button>
+        <button class="btn-print" style="background: #444;" onclick="window.location.href='belajar5.html'">Kembali Belanja</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = JSON.parse(localStorage.getItem('pesananTerakhir'));
+            const name = localStorage.getItem('namaUserAktif') || 'Pelanggan Setia';
+            
+            if (!data) { window.location.href = 'belajar5.html'; return; }
+
+            document.getElementById('invDate').innerText = new Date().toLocaleString('id-ID');
+            document.getElementById('invName').innerText = name;
+            document.getElementById('invID').innerText = Math.floor(Math.random() * 999999);
+            document.getElementById('invItem').innerText = data.item;
+            document.getElementById('invMethod').innerText = data.metode || 'Transfer Bank';
+            document.getElementById('invTotal').innerText = data.total;
+        });
+    </script>
+</body>
+</html>
