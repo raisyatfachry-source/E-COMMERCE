@@ -1,0 +1,8 @@
+.custom-section { padding: 50px 8%; text-align: center; }
+.back-link { text-decoration: none; color: #333; font-weight: bold; }
+.selection-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+.select-box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 250px; }
+select { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ddd; }
+#preview-box { margin-top: 40px; padding: 20px; border: 2px dashed #ff4757; border-radius: 10px; display: inline-block; min-width: 300px; }
+.btn-order { background: #ff4757; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; font-weight: bold; transition: 0.3s; }
+.btn-order:hover { background: #e84118; }
